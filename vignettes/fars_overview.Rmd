@@ -15,6 +15,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
+options(warn=-1)
+
 library(fars)
 library(dplyr)
 library(maps)

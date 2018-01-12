@@ -68,7 +68,7 @@ make_filename <- function(year) {
 #' fars_read_years(c(2013, 2015))
 #'
 #' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df mutate select
+#' @importFrom dplyr tbl_df mutate select %>%
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -103,7 +103,7 @@ fars_read_years <- function(years) {
 #' fars_summarize_years(c(2013, 2015))
 #'
 #' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df mutate select group_by summarize
+#' @importFrom dplyr tbl_df mutate select group_by summarize %>%
 #' @importFrom tidyr spread
 #'
 #' @export
@@ -136,7 +136,7 @@ fars_summarize_years <- function(years) {
 #' fars_map_state(56, 2015)
 #'
 #' @importFrom readr read_csv
-#' @importFrom dplyr tbl_df filter
+#' @importFrom dplyr tbl_df filter %>%
 #' @importFrom maps map
 #' @importFrom graphics points
 #'

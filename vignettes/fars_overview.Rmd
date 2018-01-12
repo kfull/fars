@@ -21,7 +21,7 @@ library(maps)
 library(readr)
 library(tidyr)
 
-setwd(system.file("inst", "extdata", package = "fars"))
+setwd(system.file("extdata", package = "fars"))
 ```
 
 This vignette gives an overview on the functionality of the FARS package. The package is designed to analyze data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
@@ -34,7 +34,7 @@ The package provides a set of functions for anlyzing data from FARS:
 - `fars_summarized_years(years)`
 - `fars_map_state(state.num, year)`
 
-In the following, the usage of these functions is discussed in more detail.
+In the following, the usage of these functions is discussed in more detail. The data used for demonstrating the usage of the functions are stored in the package folder `inst/extdata`.
 
 ## Reading FARS Data
 
@@ -43,7 +43,11 @@ For the purpose of reading data from FARS, the first step is to generate the fil
 With the following example, FARS data from year 2015 are read:
 
 ```{r fars_reading}
+# set working directory
+setwd(system.file("extdata", package = "fars"))
+# get filename
 filename <- make_filename(2015)
+# read files
 data <- fars_read(filename)
 ```
 
@@ -54,7 +58,11 @@ For the purpose of summarizing data from FARS, two functions are available in th
 With the following example, FARS data from years 2013 to 2015 are summarized:
 
 ```{r fars_summarizing}
+# set working directory
+setwd(system.file("extdata", package = "fars"))
+# extract accidents per month and year
 accidents <- fars_read_years(2013:2015)
+# cound accidents per month and year
 accidents_count <- fars_summarize_years(2013:2015)
 ```
 
@@ -67,5 +75,8 @@ With the following example, FARS data from state 1 and year 2015 are plotted on 
 
 
 ```{r fars_plotting}
+# set working directory
+setwd(system.file("extdata", package = "fars"))
+# plot accidents of state and year
 fars_map_state(1, 2015)
 ```

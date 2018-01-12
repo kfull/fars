@@ -1,3 +1,7 @@
+# resolving notes in cmd check
+STATE <- MONTH <- year <- n <- NULL
+n <- function(x) {n(x)}
+
 #' Read files from Fatality Analysis Reporting System
 #'
 #' The function \code{fars_read} reads csv files from the US National Highway

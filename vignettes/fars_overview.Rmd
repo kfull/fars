@@ -44,7 +44,7 @@ With the following example, FARS data from year 2015 are read:
 
 ```{r fars_reading}
 filename <- make_filename(2015)
-data <- fars_read(filename)
+data <- fars_read(system("inst", "extdata", filename, package = "fars"))
 ```
 
 ## Summarizing FARS Data

@@ -21,6 +21,7 @@ Traffic Safety Administration's Fatality Analysis Reporting System and
 creates a data frame out of the values.3
 }
 \examples{
+setwd(system.file("extdata", package = "fars"))
 fars_read("accident_2015.csv.bz2")
 
 }

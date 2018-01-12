@@ -25,7 +25,7 @@ Traffic Safety Administration's Fatality Analysis Reporting System and plots
 all accidents of a specific state and year on a map.
 }
 \examples{
+setwd(system.file("extdata", package = "fars"))
 fars_map_state(1, 2015)
-fars_map_state(56, 2015)
 
 }

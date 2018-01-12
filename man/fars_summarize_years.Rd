@@ -21,7 +21,7 @@ Highway Traffic Safety Administration's Fatality Analysis Reporting System
 and counts accidents per month and year.
 }
 \examples{
+setwd(system.file("extdata", package = "fars"))
 fars_summarize_years(2013:2015)
-fars_summarize_years(c(2013, 2015))
 
 }

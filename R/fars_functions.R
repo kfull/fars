@@ -16,6 +16,7 @@ n <- function(x) {n(x)}
 #' is generated and nothing is returned.
 #'
 #' @examples
+#' setwd(system.file("extdata", package = "fars"))
 #' fars_read("accident_2015.csv.bz2")
 #'
 #' @importFrom readr read_csv
@@ -68,8 +69,8 @@ make_filename <- function(year) {
 #' an error message is generated and nothing is returned.
 #'
 #' @examples
+#' setwd(system.file("extdata", package = "fars"))
 #' fars_read_years(2013:2015)
-#' fars_read_years(c(2013, 2015))
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df mutate select %>%
@@ -103,8 +104,8 @@ fars_read_years <- function(years) {
 #' and nothing is returned.
 #'
 #' @examples
+#' setwd(system.file("extdata", package = "fars"))
 #' fars_summarize_years(2013:2015)
-#' fars_summarize_years(c(2013, 2015))
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df mutate select group_by summarize %>%
@@ -136,8 +137,8 @@ fars_summarize_years <- function(years) {
 #' and nothing is plotted again.
 #'
 #' @examples
+#' setwd(system.file("extdata", package = "fars"))
 #' fars_map_state(1, 2015)
-#' fars_map_state(56, 2015)
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df filter %>%

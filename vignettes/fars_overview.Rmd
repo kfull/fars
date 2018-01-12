@@ -21,7 +21,7 @@ library(maps)
 library(readr)
 library(tidyr)
 
-system.file("inst", "extdata", package = "fars")
+setwd(system.file("inst", "extdata", package = "fars"))
 ```
 
 This vignette gives an overview on the functionality of the FARS package. The package is designed to analyze data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System (FARS), which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.
@@ -44,7 +44,7 @@ With the following example, FARS data from year 2015 are read:
 
 ```{r fars_reading}
 filename <- make_filename(2015)
-data <- fars_read(system("inst", "extdata", filename, package = "fars"))
+data <- fars_read(filename)
 ```
 
 ## Summarizing FARS Data
